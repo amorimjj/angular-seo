@@ -1,10 +1,11 @@
 version: '2.1'
 services:
   node:
-    image: "node:8"    
-    working_dir: /usr/src/app
+    image: "node-seo"
+    build:
+      context: .
     command: ["npm", "start"]
     ports:
       - "8080:8080"
     volumes:
-      - "${PWD}:/usr/src/app"
+      - "${PWD}:/usr/src/seo"
