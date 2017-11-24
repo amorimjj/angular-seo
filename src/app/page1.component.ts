@@ -6,7 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page1.component.css']
 })
 export class Page1Component implements OnInit {
-  constructor() { }
+	constructor(meta: Meta, title: Title) { 
+		title.setTitle('Page1');
+		meta.addTags([
+        	{ name: 'author', content: 'AmorimJJ' },
+        	{ name: 'description', content: 'This is a description for page 1.' },
+      	]);
+	}
 
   ngOnInit() {
   }
